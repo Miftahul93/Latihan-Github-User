@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 import com.example.mysubmissionbfaagithubuserapps.R
 import com.example.mysubmissionbfaagithubuserapps.database.FavoriteUser
 import com.example.mysubmissionbfaagithubuserapps.databinding.ActivityDetailBinding
@@ -34,7 +35,7 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Detail User"//(R.string.Detail_User.toString())
+        supportActionBar?.title = resources.getText(R.string.detail_user)
 
         val username = intent.getStringExtra(EXTRA_USERNAME)
         val id = intent.getIntExtra(EXTRA_ID, 0)
@@ -62,10 +63,10 @@ class DetailActivity : AppCompatActivity() {
                         .transition(DrawableTransitionOptions.withCrossFade())
                         .centerCrop()
                         .circleCrop()
-                        .placeholder(R.drawable.loading)
-                        .fallback(R.drawable.blank)
-                        .error(R.drawable.error101)
-                        .into(ivProfil)
+                        .apply(RequestOptions.placeholderOf(R.drawable.loading)
+                            .fallback(R.drawable.blank)
+                            .error(R.drawable.error101))
+                        .into(ivProfile)
                 }
 
                 favoriteUser = FavoriteUser(it.avatarUrl, it.id, it.login)//, it.avatarUrl)

@@ -6,16 +6,20 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(entities = [FavoriteUser::class], version = 1)
-abstract class DatabaseFavoriteUser: RoomDatabase() {
+abstract class DatabaseFavoriteUser : RoomDatabase() {
 
     companion object {
         @Volatile
-        private var INSTANCE : DatabaseFavoriteUser? = null
+        private var INSTANCE: DatabaseFavoriteUser? = null
 
         fun getDatabase(context: Context): DatabaseFavoriteUser? {
             if (INSTANCE == null) {
                 synchronized(DatabaseFavoriteUser::class) {
-                    INSTANCE = Room.databaseBuilder(context.applicationContext, DatabaseFavoriteUser::class.java, "user_database").build()
+                    INSTANCE = Room.databaseBuilder(
+                        context.applicationContext,
+                        DatabaseFavoriteUser::class.java,
+                        "user_database"
+                    ).build()
                 }
             }
             return INSTANCE

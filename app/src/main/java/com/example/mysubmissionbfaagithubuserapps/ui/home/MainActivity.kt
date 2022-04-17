@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Home" //(R.string.app_name.toString())
+        supportActionBar?.title = resources.getText(R.string.app_name)
 
         adapter = UserAdapter()
         adapter.notifyDataSetChanged()

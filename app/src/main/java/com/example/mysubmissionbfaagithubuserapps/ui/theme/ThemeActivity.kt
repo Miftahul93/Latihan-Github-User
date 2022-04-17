@@ -29,7 +29,7 @@ class ThemeActivity : AppCompatActivity() {
         binding = ActivityThemeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = (R.string.Pengaturan.toString())
+        supportActionBar?.title = resources.getText(R.string.pengaturan)
 
         val switchTheme = binding.switchTheme
 

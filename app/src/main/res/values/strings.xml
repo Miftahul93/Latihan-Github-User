@@ -17,7 +17,7 @@
     <string name="splashscreen">Splashscreen</string>
     <string name="created_by_miftahul_ulum">Created By : Miftahul Ulum</string>
     <string name="background_profile">Background Profile</string>
-    <string name="Detail_User">Detail User</string>
-    <string name="Pengaturan">Pengaturan</string>
+    <string name="detail_user">Detail User</string>
+    <string name="pengaturan">Pengaturan</string>
     <string name="favorite_User">Favorite User</string>
 </resources>

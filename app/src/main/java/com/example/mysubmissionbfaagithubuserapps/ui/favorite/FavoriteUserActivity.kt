@@ -27,8 +27,7 @@ class FavoriteUserActivity : AppCompatActivity() {
         binding = ActivityFavoriteUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Nama belum bener
-        supportActionBar?.title = (R.string.favorite_User.toString())
+        supportActionBar?.title = resources.getText(R.string.favorite_User)
 
         adapter = UserAdapter()
         adapter.notifyDataSetChanged()

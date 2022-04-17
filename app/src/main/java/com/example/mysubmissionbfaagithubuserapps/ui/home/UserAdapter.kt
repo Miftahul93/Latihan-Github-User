@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 import com.example.mysubmissionbfaagithubuserapps.R
 import com.example.mysubmissionbfaagithubuserapps.databinding.ItemUserBinding
 import com.example.mysubmissionbfaagithubuserapps.model.User
@@ -37,9 +38,9 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .centerCrop()
                     .circleCrop()
-                    .placeholder(R.drawable.loading)
-                    .fallback(R.drawable.blank)
-                    .error(R.drawable.error101)
+                    .apply(RequestOptions.placeholderOf(R.drawable.loading)
+                        .fallback(R.drawable.blank)
+                        .error(R.drawable.error101))
                     .into(ivUser)
                 tvName.text = user.login
             }
