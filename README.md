@@ -1,17 +1,7 @@
-# Submission-3-BFAA-Dicoding-New-Update
-Kelas Belajar Fundamental Aplikasi Android diperbarui pada tanggal 14-15 September 2021
-
-Kriteria Submission
-Fitur yang harus ditambahkan pada aplikasi:
-
-1. Favorite User dengan Database
-		
-		Syarat :
-		. Aplikasi harus bisa menambah dan menghapus user dari daftar favorite.
-		. Aplikasi harus mempunyai halaman yang menampilkan daftar favorite.
-		. Menampilkan halaman detail dari daftar favorite.
-
-2. Pengaturan Tema
-		
-		Syarat :
-		. Membuat menu untuk mengganti tema (light theme atau dark theme) dengan menggunakan penyimpanan key-value.
+Cara penggunaan Aplikasi
+1. Buka aplikasi seperti biasanya
+2. lakukan pencarian akun melalui menu pencarian
+3. ketikkan namaId yang akan di cari lalu tekan ikon cari atau tekan langsung dari keyboard 
+4. setelah muncul nama yang dicari klik saja nama sesuai yang dicari 
+5. setelah muncul detail nama yang dipilih klik tombol favorite atau ikon love untuk menyukainya
+6. untuk mengecek masuk database bisa cek melalui ikon love yang ada di pojok kanan atas.
